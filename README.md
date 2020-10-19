@@ -1,2 +1,1 @@
-# lec-unist-nc_dc
-Special talk on NCSOFT datacenter 
+# Xaringan for UNIST talk on NCSOFT datacenter 

@@ -1,4 +1,4 @@
-librarian::shelf(here, yihui/xaringan, gadenbuie/xaringanthemer, rstudio/fontawesome, ropenscilabs/icon)
+librarian::shelf(here, yihui/xaringan, gadenbuie/xaringanthemer)
 
 #options(servr.interval = 0.1)
 #options(servr.daemon = TRUE)

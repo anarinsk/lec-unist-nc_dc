@@ -28,8 +28,7 @@ output:
 ```{r css setting, include = FALSE}
 # Related csses are generated in css/  
 #eval(parse('set-css.R', encoding="UTF-8"))
-
-library(fontawesome)
+source('small_bites.R')
 #options(htmltools.dir.version = FALSE)
 ```
 
@@ -38,7 +37,7 @@ class: top, left, spaced, top, animated, fadeIn
 
 ---
 
-background-image: url(img/hi.gif)
+background-image: url(img/death_knight.gif)
 background-size: cover
 
 ---
@@ -50,50 +49,47 @@ background-size: cover
 <br>
 <br>
 <br>
-#### &emsp; `r icon::fa("rocket", color="steelblue")` PhD in Economics (evolutionary game theory)
-#### &emsp; `r icon::fa("rocket", color="steelblue")` Data Center, Lead (~ 6 years)
+### `r icon_rocket()` PhD in Economics (evolutionary game theory)
+### `r icon_rocket()` Data Center, Lead (Since 2019)
 
 ---
 
 # Today Talks 
 
-### &emsp; `r icon::fa("rocket", color="steelblue")` What we are doing? 
-### &emsp; `r icon::fa("rocket", color="steelblue")` What is so special with 'game' data?
-### &emsp; `r icon::fa("rocket", color="steelblue")` Sharing experience to work with data
-### &emsp; `r icon::fa("rocket", color="steelblue")` Q &A (if there is any)
+### &emsp; `r icon_rocket()` What we are doing? 
+### &emsp; `r icon_rocket()` What is so special with 'game' data?
+### &emsp; `r icon_rocket()` Sharing my experience to work with data
+### &emsp; `r icon_rocket()` Q & A (if there is any)
 
 ---
-
-# My Works 
-
-### &emsp; `r fa("check", fill = "steelblue")` Data 적재 
-        - On-premise Hadoop system 
-        - 8 PB+ total, 11 TB+ daily 
-### &emsp; `r fa("check", fill = "steelblue")` 정보 요약 및 지표 생산 
-### &emsp; `r fa("check", fill = "steelblue")` Data Service 제공  
-### &emsp; `r fa("check", fill = "steelblue")` Data 분석과 관련 Research
-        - 봇 검출 알고리듬 운용, 이벤트 효과 분석 
-        - 통계학적 방법론과 기계학습 방법론 병행 운용 
-  
----
-
-# 오늘 이야기할 주제 
-<br>
-<br>
-### &emsp; 1. AI의 시대를 경제학적으로 이해한다면?
-### &emsp; 2. AI와 데이터는 어떻게 연결될까? 
-### &emsp; 3. AI/Data 시대에 경제학은 쓸모가 있을까? 
-<br>
-#### &emsp;&emsp; `r icon::fa("home", color="yellow")` 이 자료는 https://tiny.cc/knulec 보실 수 있습니다. 
-
----
-
-background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(img/factory.gif)
+background-image: url(img/Data-Center_wrong.jpg)
 background-size: cover
 class: center, middle, animated, fadeIn
 
-# AI 시대의 경제학적 의미
+# Data Center?
 
+---
+background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(img/Data-Center_wrong.jpg)
+background-size: cover
+class: center, middle, animated, fadeIn
+
+# It's just a name of devision. 
+
+---
+# Data Center(DC) of NCSOFT
+
+## The work of DC includes 
+### &emsp; `r icon_check()` mananging data and its infrastructure
+### &emsp; `r icon_check()` doing analytics with data 
+### &emsp; `r icon_check()` communucating insight & helping decision.
+  
+---
+class: left, top
+background-image: url(img/dc-infra.png)
+background-size: contain
+
+
+# Data Volume
 ---
 
 background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(img/question-marks.jpg)

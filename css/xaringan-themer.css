@@ -16,21 +16,10 @@
  *    - remarkjs wiki: https://github.com/gnab/remark/wiki
  *
  * ------------------------------------------------------- */
-@import url(https://fonts.googleapis.com/css?family=Gothic+A1:400,400i);
-@import url(https://fonts.googleapis.com/css?family=Do+Hyeon);
-@import url(https://fonts.googleapis.com/css?family=Droid+Mono);
+/* @import url(https://fonts.googleapis.com/css?family=Gothic+A1:400,400i); */
+/* @import url(https://fonts.googleapis.com/css?family=Do+Hyeon); */
+/* @import url(https://fonts.googleapis.com/css?family=Droid+Mono); */
 
-
-body {
-  font-family: Gothic A1, 'Palatino Linotype', 'Book Antiqua', Palatino, 'Microsoft YaHei', 'Songti SC', serif;
-  font-weight: 400;
-  color: #977B58;
-}
-h1, h2, h3 {
-  font-family: Do Hyeon;
-  font-weight: normal;
-  color: #D8B17E;
-}
 .remark-slide-content {
   background-color: #333333;
   font-size: 20px;

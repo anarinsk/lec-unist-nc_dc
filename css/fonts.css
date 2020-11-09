@@ -1,0 +1,20 @@
+/* Extra CSS */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/* @import url('https://fonts.googleapis.com/css?family=Roboto+Slabs');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slabs');
+@import url('https://fonts.googleapis.com/css?family=convergence');
+@import url('https://fonts.googleapis.com/css?family=Saira+Condensed'); */
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #977B58;
+  }
+  h1, h2, h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    color: #D8B17E;
+  }

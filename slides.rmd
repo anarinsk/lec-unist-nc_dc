@@ -17,7 +17,7 @@ output:
       - "css/fonts.css"
       - "css/title-slide.css"
     nature:
-      ratio: "4:3"
+      ratio: "16:10"
       highlightStyle: github
       highlightLines: true
       slideNumberFormat: |
@@ -39,8 +39,8 @@ class: top, left, spaced, top, animated, fadeIn
 
 ---
 
-background-image: url(img/death_knight.gif)
-background-size: cover
+background-image: url(img/sword.jpg)
+background-size: contain
 
 ---
 
@@ -58,8 +58,8 @@ background-size: cover
 
 # Today Talk  
 
-### &emsp; `r icon_rocket()` What we are doing? 
-### &emsp; `r icon_rocket()` What is so special with 'game' data?
+### &emsp; `r icon_rocket()` What DC is doing? 
+### &emsp; `r icon_rocket()` What is so special for 'game' data?
 ### &emsp; `r icon_rocket()` Sharing my experience to work with data
 ### &emsp; `r icon_rocket()` Q & A (if there is any)
 
@@ -91,47 +91,51 @@ background-image: url(img/dc-infra.png)
 background-size: contain
 
 
-# Data Volume
+# Data Volume of DC
 ---
 
 background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(img/question-marks.jpg)
 background-size: cover
 
-# 질문!  
+# Question for You  
 <br>
-## "경제학 배우면 먼저 떠오르는 단어는?" 
+## What is (Big) Data?
 
 --
 
-#### &emsp;`r icon::fa("comments", color="yellow")` 아마도 가격(PRICE)? 가격이란 무엇인가요? 
+### &emsp;`r icon_comment()` Image any data you've handled. 
 
 --
 
-#### &emsp;`r icon::fa("comments", color="yellow")` 어떤 재화/서비스의 가격이 떨어졌다는 것은? 
+### &emsp;`r icon_comment()` How big is big?
 
 --
 
-#### &emsp;`r icon::fa("comments", color="yellow")` 한 재화의 하락은 어떻게 다른 영역으로 퍼져나갑니까? 
+### &emsp;`r icon_comment()` How can you define data of any kind? 
+
+---
+background-image: url(img/excel-like.jpg)
+background-size: cover
+class: center, middle, animated, fadeIn
+
+# Is this familiar? 
+
+---
+background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(img/excel-like.jpg)
+background-size: cover
+class: center, middle, animated, fadeIn
+
+# It's organized and tabulated one. 
+
+
 
 ---
 
-# 보완재와 네트워크 효과
+# Data May be a Pile of 'Garbage...' 
 
-### 재화 간 관계  
-+ 보완재 vs. 대체재 
-+ AI/알고리듬은 보완재? 대체제? 
+### Usually, data are not so clean. 
 
---
-  
-### 망 외부성 
-+ 간단히 말하면 "많이 쓸수록 좋아진다!" 
-+ 외부성이란 무엇일까? 
-+ 왜 외부성일까? 
-+ 규모의 경제 (Economies of scale)
 
---
-
-### `r icon::ii("checkmark-circled")` "소프트웨어와 알고리듬은 망 외부성을 지니기 쉽다."
 
 ---
 
@@ -181,7 +185,7 @@ background-size: cover
 class: center, middle, animated, fadeIn
 
 
-# Age of AI = Age of Data!
+# Age of AI $\approx$ Age of Data!
 
 ---
 

@@ -2,7 +2,7 @@
 title: "Data in Wonderland"
 subtitle: ""
 author: "허준석 Jun-sok Huhh / NCSOFT"
-date: "2020/12/05 (updated: `r Sys.Date()`)" 
+date: "2020/12/08 (updated: `r Sys.Date()`)" 
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -38,9 +38,8 @@ layout: true
 class: top, left, spaced, top, animated, fadeIn
 
 ---
-
-background-image: url(img/sword.jpg)
-background-size: contain
+background-image: url(img/sword_2.jpg)
+background-size: cover
 
 ---
 
@@ -58,32 +57,31 @@ background-size: cover
 
 # Today Talk  
 
-### &emsp; `r icon_rocket()` What DC is doing? 
-### &emsp; `r icon_rocket()` What is so special for 'game' data?
-### &emsp; `r icon_rocket()` Sharing my experience to work with data
-### &emsp; `r icon_rocket()` Q & A (if there is any)
+### &thinsp; `r icon_rocket()` What DC is doing? (and how to collect data of games)
+### &thinsp; `r icon_rocket()` What is so special for 'game' data?
+### &thinsp; `r icon_rocket()` Sharing my experience to work with data
+### &thinsp; `r icon_rocket()` Q & A (if there is any)
 
 ---
 background-image: url(img/Data-Center_wrong.jpg)
 background-size: cover
 class: center, middle, animated, fadeIn
-
-# Data Center?
+# <span style="color:black; background-color:gray">&thinsp;Data Center?&thinsp;</span>
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(img/Data-Center_wrong.jpg)
 background-size: cover
 class: center, middle, animated, fadeIn
 
-# It's just a name of devision. 
+# It's just a name of division. 
 
 ---
 # Data Center(DC) of NCSOFT
 
 ## The work of DC includes 
-### &emsp; `r icon_check()` mananging data and its softwere infrastructure
-### &emsp; `r icon_check()` doing analytics with data 
-### &emsp; `r icon_check()` communucating insights & helping decision making.
+### &thinsp; `r icon_check()` mananging data and its softwere infrastructure
+### &thinsp; `r icon_check()` doing analytics with data 
+### &thinsp; `r icon_check()` communucating insights & helping decision making.
   
 ---
 class: left, top
@@ -92,33 +90,32 @@ background-size: contain
 
 
 # Data Volume of DC
+
 ---
 
 background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(img/question-marks.jpg)
 background-size: cover
 
-# Question for You  
+# Questions for You  
 <br>
-## What is (Big) Data?
 
 --
-
-### &emsp;`r icon_comment()` Image any data you've handled. 
-
---
-
-### &emsp;`r icon_comment()` How big is big?
+### &thinsp;`r icon_comment()` What is (Big) Data?
 
 --
+### &thinsp;`r icon_comment()` Image any data you've handled. 
 
-### &emsp;`r icon_comment()` How can you define data of any kind? 
+--
+### &thinsp;`r icon_comment()` How big is big?
+
+--
+### &thinsp;`r icon_comment()` Can you define data of any kind? 
 
 ---
 background-image: url(img/excel-like.jpg)
 background-size: cover
 class: center, middle, animated, fadeIn
-
-# Is this familiar? 
+#<span style="color:black; background-color:gray">&thinsp;Look familiar?&thinsp;</span> 
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(img/excel-like.jpg)
@@ -127,19 +124,75 @@ class: center, middle, animated, fadeIn
 
 # It's organized and tabulated one. 
 
+---
+# Data May Be A Pile of 'Garbage...' 
 
+### &thinsp; `r icon_check()` Usually data are not (cannot be) so *clean*. 
+### &thinsp; `r icon_check()` Something organized or tabulated &rarr; You got the picture of data. 
+### &thinsp; `r icon_check()` Big data are generally unorganized, unstructured, and messy.
 
 ---
-
-# Data May be a Pile of 'Garbage...' 
-
-### Usually, data are not so clean. 
-
-
+background-image: url(img/gameplaying.gif)
+background-size: cover
+class: left, top, animated, fadeIn
+### <span style="color:black; background-color:gray">&thinsp;When you playing game...&thinsp;</span> 
 
 ---
+background-image: url(img/NC_MMORPG.png)
+background-size: contain
+class: left, top, animated, fadeIn
+### The other side of playing 
 
-# Back to the Future 
+---
+background-image: url(img/hdfs.png)
+background-size: contain
+class: left, top, animated, fadeIn
+
+---
+background-image: url(img/log.png)
+background-size: cover
+class: center, middle, animated, fadeIn
+##<span style="color:black; background-color:gray">&thinsp;logs are ...&thinsp;</span> 
+
+---
+background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(img/log.png)
+background-size: cover
+class: center, middle, animated, fadeIn
+## meaningless (if you don't get to their secret)
+
+---
+# First of All, DC is A Data Janitor
+
+## &thinsp; `r icon_rocket()` Think what a janitor does.
+### &emsp; &thinsp; `r icon_check()` All of janitor jobs are about preparing something for the work 
+### &emsp; &thinsp; `r icon_check()` Any automated system cannot process log without human effort.
+### &emsp; &thinsp; `r icon_check()` Around 90% of data works is janitor jobs.   
+
+---
+# What Data Engineers do in DC 
+
+## &emsp; `r icon_check()` Managing our custom Hadoop system
+## &emsp; `r icon_check()` Developing data tools and services 
+## &emsp; `r icon_check()` Operating day-to-day data stream  
+
+---
+# DC is A Data Communicator 
+
+## Log in raw give no insight for you. 
+## Log should be transformed & proccessed. 
+
+---
+# Game Analytics Depends on Metrics 
+## TESTed
+
+---
+# Key Metrics Should Be Delivered ASAP 
+
+## Define Proper metrics for the game product 
+## Make Data Services 
+
+---
+# Computers 
 
 .pull-left[
 IBM 7094
@@ -149,9 +202,7 @@ IBM 7094
 IBM 5150
 ![](img/ibm5150.jpg)
 ]
-
 ---
-
 # AI라고 다를까? 
 
 
@@ -206,7 +257,7 @@ knitr::include_graphics("img/artificial_neural_network_1-791x388.jpg")
 
 --
 
-#### &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;(천재적인 발상이었지만...)
+#### &thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;(천재적인 발상이었지만...)
  
 ---
 

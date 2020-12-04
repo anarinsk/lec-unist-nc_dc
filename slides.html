@@ -20,7 +20,7 @@ class: center, middle, inverse, title-slide
 
 # Data in Wonderland
 ### 허준석 Jun-sok Huhh / NCSOFT
-### 2020/12/08 (updated: 2020-12-01)
+### 2020/12/08 (updated: 2020-12-03)
 
 ---
 
@@ -81,11 +81,28 @@ class: left, top
 background-image: url(img/dc-infra.png)
 background-size: contain
 
-
 # Data Volume of DC
 
 ---
+class: left, top
+background-image: url(img/peta.jpg)
+background-size: contain
 
+---
+class: center, middle
+background-image: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)),url(img/peta.jpg)
+background-size: contain
+
+1 Byte = `\(2^8\)` bit 
+
+1 KB = `\(2^{10}\)` Byte `\(\approx\)` 1,000 Byte
+
+1 MB = `\({\rm 1KB}^3 \approx 10^{3+3}\)` Byte
+
+1 GB = `\({\rm 1KB}^6 \approx 10^{3+6}\)` Byte
+
+
+---
 background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(img/question-marks.jpg)
 background-size: cover
 
@@ -164,25 +181,128 @@ class: center, middle, animated, fadeIn
 ---
 # What Data Engineers do in DC 
 
-## &amp;emsp; <i class="fas  fa-check " style="color:steelblue;"></i> Managing our custom Hadoop system
-## &amp;emsp; <i class="fas  fa-check " style="color:steelblue;"></i> Developing data tools and services 
-## &amp;emsp; <i class="fas  fa-check " style="color:steelblue;"></i> Operating day-to-day data stream  
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Managing our custom Hadoop system
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Developing data tools and services 
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Operating day-to-day data stream  
 
 ---
 # DC is A Data Communicator 
 
-## Log in raw give no insight for you. 
-## Log should be transformed &amp; proccessed. 
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Data is nothing if its messege is not delivered  
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Communication is key part of data works
 
 ---
-# Game Analytics Depends on Metrics 
-## TESTed
+# Two Pillars of Communication
+
+### 1. Metrics 
+### 2. Visualization 
 
 ---
-# Key Metrics Should Be Delivered ASAP 
+# Metrics Frequently Used
 
-## Define Proper metrics for the game product 
-## Make Data Services 
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> AU = Active Users 
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> ARPU = Average Revenue Per User 
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> ARPPU = Average Revenue Per Paying User 
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> CLV = Customer's Life-time Value 
+
+---
+background-image: url(img/marketing_analytics.jpg)
+background-size: cover
+class: center, middle, animated, fadeIn
+##&lt;span style="color:black; background-color:gray"&gt;&amp;thinsp;Conventional wisdom...&amp;thinsp;&lt;/span&gt; 
+
+---
+background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(img/marketing_analytics.jpg)
+background-size: cover
+class: center, middle, animated, fadeIn
+## Speed and Reinvent 
+
+---
+# Speed: Near-real Time 
+
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Speed of feedback is extraordinary. 
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Some loopholes or bugs are so damaging... 
+
+---
+background-image: url(img/now_1.png)
+background-size: contain
+class: center, middle, animated, fadeIn
+##&lt;span style="color:black; background-color:gray"&gt;&amp;thinsp;Monitoring players within 1 minuate lag&amp;thinsp;&lt;/span&gt; 
+
+---
+background-image: url(img/now_2.png)
+background-size: contain
+class: center, middle, animated, fadeIn
+
+---
+# Reinvent: Importing Useful Metrics 
+
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Transforming key metrics of real world 
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Applying *proven* metrics to virtual world 
+
+---
+background-image: url(img/auction_1.jpg)
+background-size: contain
+class: center, middle, animated, fadeIn
+
+---
+background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(img/auction_1.jpg)
+background-size: contain
+class: center, middle, animated, fadeIn
+### &amp;emsp; <i class="fas  fa-check " style="color:steelblue;"></i> The one and only *market* in *Lineage M*
+### &amp;emsp; <i class="fas  fa-check " style="color:steelblue;"></i> Does this look like *stock exchange*? 
+
+---
+# Auction House `\(\approx\)` Stock Exchange 
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> An aution house in game reveals the valuation of resources.
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> How to summarise such valuation in auctioning? 
+### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Stock market index might be a good start! 
+
+---
+# Similarity 
+
+### &amp;emsp; <i class="fas  fa-check " style="color:steelblue;"></i> Valuation by players or traders
+### &amp;emsp; <i class="fas  fa-check " style="color:steelblue;"></i> Pricing mechanism (aution &amp; matching)
+
+---
+# Difference 
+### &amp;emsp; <i class="fas  fa-check " style="color:steelblue;"></i> Single market vs. Multiple markets (servers)
+### &amp;emsp; <i class="fas  fa-check " style="color:steelblue;"></i> Unique unit vs. Variation in a unit 
+
+---
+background-image: url(img/auction_pca.png)
+background-size: contain
+class: center, middle, animated, fadeIn
+
+
+---
+background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),url(img/auction_pca.png)
+background-size: contain
+class: center, middle, animated, fadeIn
+### &amp;emsp; <i class="fas  fa-check " style="color:steelblue;"></i> Using PCA, we build composite index for users' auctioning 
+### &amp;emsp; <i class="fas  fa-check " style="color:steelblue;"></i> We are tracking daily behavior and trends.
+
+---
+background-image: url(img/index_1.png)
+background-size: contain
+class: center, middle, animated, fadeIn
+
+---
+background-image: url(img/index_2.png)
+background-size: contain
+class: center, middle, animated, fadeIn
+
+---
+# Metrics in More Microscopic View
+
+## Tear-down consumption by individual users 
+## Measuring responsiveness of offering 
+## Revising proposition for users 
+
+---
+# CBDC in virtual world 
+
+## CBDC = Central Ban Digital Currency 
 
 ---
 # Computers 

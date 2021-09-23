@@ -1,14 +1,19 @@
 library(fontawesome)
+#library(xaringanExtra)
+
+bullet_color = "white"
 
 icon_rocket <- function(){
-    icon::fa("broom", color="steelblue")
+  fa("terminal", fill = bullet_color) 
 }
 
 icon_check <- function(){
-    icon::fa("check", color = "steelblue")
+    fa("check", fill = bullet_color)
 }
 
 
 icon_comment <- function(){
-    icon::fa("comments", color="yellow")
+    fa("comments", fill = bullet_color)
 }
+
+1

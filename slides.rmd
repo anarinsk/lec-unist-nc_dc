@@ -1,8 +1,8 @@
 ---
 title: "Data in Wonderland"
-subtitle: "Guided tour for how to work with data"
-author: "허준석 Jun-sok Huhh / NCSOFT"
-date: "2021/10/7 (updated: `r Sys.Date()`)" 
+subtitle: "Guided tour for data science in online games"
+author: "허준석 Junsok Huhh / NCSOFT"
+date: "2021/10/14 (updated: `r Sys.Date()`)" 
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -63,6 +63,8 @@ The sword is 집행검, as reported, the most powerful weapon in Lineage series.
 A person talked The model 집행검 is expensive, but they didn't know that virtual 집행검 is much more expensive than the real one. 
 What's your guess of the price? There was a record that 집행검 is traded by more than 50 T USD. 
 
+Recently, we have problem in Korean gaming scenes. I have my opinion on this issues. But, this is not our interest in this lecture. I will skip or jump issues. 
+
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/ncsoft2.jpg)
 background-size: cover
@@ -75,7 +77,7 @@ background-size: cover
 
 ???
 
-I'm PhD in Economics. My major reseach is about evolutionary game theory. NOT game. 
+I'm PhD in Economics. My major research is about evolutionary game theory. NOT game. 
 Anyway, game is the key word of my life. 
 
 Now, I'm the lead or head(in Korean English), of Data Center, NCSOFT Korea. 
@@ -86,18 +88,18 @@ Now, I'm the lead or head(in Korean English), of Data Center, NCSOFT Korea.
 
 ### &thinsp; `r icon_rocket()` How game data is collected
 ### &thinsp; `r icon_rocket()` Three roles of DC
-### &thinsp; `r icon_rocket()` Some nudges for you
+### &thinsp; `r icon_rocket()` Some latest works of DC
 ### &thinsp; `r icon_rocket()` Q & A (if there is any)
 
 ???
 
 Today, topics of my talk has three parts. 
 
-One, I give you some description of game data, what and how they are collected. 
+One, I give you some description and explnation of game data, what and how they are collected. 
 
 Two, I give you three main roles of DC. 
 
-Three, I give you three recommendation if you are interested in working as data scientists or data engineers or whatever data jobs. 
+Three, I tell you some recent issues or research interests of my organization. 
 
 ---
 background-image: url(img/Data-Center_wrong.jpg)
@@ -111,7 +113,9 @@ Now, when people say Data Center
 
 Usually it is hardware infrastructure, like this. 
 
-hundreds thousands of server. 
+hundreds thousands of server. AWS, Microsoft Azure, Google Cloud. 
+
+In NCSOFT, Data Center is the name of organization. We do not handle any hardware-side jobs. Our main mission is to collect and process data from games, to maintain software platform related to data, and to anlayze data. Please, don't be confused.   
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/Data-Center_wrong.jpg)
@@ -151,22 +155,22 @@ Data store in NCSOFT is bigger than that.
 
 ---
 class: left, top
-background-image: url(img/peta.jpg)
+background-image: url(img/bytes.png)
 background-size: cover
 
 
 ---
 class: center, middle
-background-image: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)),url(img/peta.jpg)
+background-image: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)),url(img/bytes.png)
 background-size: cover
 class: center, left, animated, fadeIn
 <br>
 <br>
 <br>
 ### 1 Byte = $2^8$ bit 
-### 1 KB = $2^{10}$ Byte $\approx$ 1,000 Byte
-### 1 MB = ${\rm 1KB}^3 \approx 10^{3+3}$ Byte
-### 1 GB = ${\rm 1KB}^6 \approx 10^{3+6}$ Byte
+### 1 KB = $2^{10}$ Byte = 1,024 Byte $\approx$ $10^3$ Byte
+### 1 MB = ${\rm 1KB}^2$ = $2^{20}$ KB = 1,048,576 KB $\approx$ $10^{6}$ Byte
+### 1 GB = ${\rm 1KB}^3$ =  $2^{30}$ KB = 1,073,741,824 KB $\approx$ $10^{9}$ Byte
 
 
 ???
@@ -175,11 +179,29 @@ This is the reason that you see size of your drive is less than the spec.
 
 The maker of drive shows you decimal capacity. 
 
-But, Windows shows you 1 KB based on binary 1 Byte. 
+But, Windows or computers shows you 1 KB based on binary 1 Byte. 
 
 That is to say, 
 
 For 1 TB in decimal is around 976GB... 
+
+---
+class: center, middle
+background-image: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)),url(img/bytes.png)
+background-size: cover
+class: left, animated, fadeIn
+
+<br>
+<br>
+<br>
+
+For example, 
+If a disk size is 500 GB in decimal term, its binary capacity is 
+
+$$
+\dfrac{500 * 10^9}{2^{30}} = 465.6613
+$$
+
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/question-marks.jpg)

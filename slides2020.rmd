@@ -199,7 +199,7 @@ For example,
 If a disk size is 500 GB in decimal term, its binary capacity is 
 
 $$
-\dfrac{500 * 10^9}{2^{30}} = 465.6613
+\dfrac{500 * 10^9}{2^{30}} = 465.6613.
 $$
 
 
@@ -224,6 +224,7 @@ class: fadeIn
 ???
 
 Think, for a moment. Imagine your data experiences....
+I may be wrong, but files like Excel or Excel-like data (CSV) looks familiar.  
 
 ---
 background-image: url(img/excel-like.jpg)
@@ -552,10 +553,8 @@ background-size: contain
 class: center, middle, animated, fadeIn
 
 
-??? 
-
+???
 To make index, we should fix reference point, day 0 index. 
-
 And we are producing daily or weekly index for auction house in game.
 
 ---
@@ -595,8 +594,18 @@ But, many problem are need to be checked by human intelligence.
 <br>
 ### &thinsp; `r icon_rocket()` A/B test is widely used to optimize many services
 ### &thinsp; `r icon_rocket()` In social events, A/B test is often controversial. 
-#### &emsp;  &emsp; &thinsp;  `r icon_check()` Consider Covid-19 vaccine A/B.
+#### &emsp;  &emsp; &thinsp;  `r icon_check()` Consider Covid-19 vaccine A/B test.
 ### &thinsp; `r icon_rocket()` Statistical methods are useful. 
+
+---
+# Good Gear as Lottery
+<br> 
+
+### If nature gives a player good weapon, will the player spend more time and money in the game? 
+### This problem is not so simple as it looks... 
+
+---
+# 
 
 ---
 # PK vs Retention

@@ -3,17 +3,25 @@ library(fontawesome)
 
 bullet_color = "white"
 
+library(fontawesome)
+#library(xaringanExtra)
+
+bullet_color = "white"
+
 icon_rocket <- function(){
-  fa("terminal", fill = bullet_color) 
+  fa("caret-right", fill = bullet_color) 
 }
 
 icon_check <- function(){
-    fa("check", fill = bullet_color)
+  fa("check", fill = bullet_color)
 }
 
 
 icon_comment <- function(){
-    fa("comments", fill = bullet_color)
+  fa("comments", fill = bullet_color)
 }
 
-1
+icon_link <- function(){
+  fa("external-link-alt", fill = bullet_color)
+}
+

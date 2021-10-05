@@ -1,14 +1,14 @@
-install.packages('devtools')
+renv::init(force=T)
 
-if (!requireNamespace("remotes"))
+yif (!requireNamespace("remotes"))
   install.packages("remotes")
 
-devtools::install_github(c('rstudio/rmarkdown',
-                           'yihui/xaringan', 
+devtools::install_github(c('yihui/xaringan', 
                            'yihui/showtext',
                            'rstudio/fontawesome',
                            'gadenbuie/xaringanthemer', 
                            'gadenbuie/xaringanExtra'))
 
-renv::init(force=T)
+
+
 

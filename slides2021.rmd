@@ -9,7 +9,7 @@ output:
     #yolo: true
     #self_contained: true
     css: 
-      #- "css/animate.css"
+      - "css/animate.css"
       #- "css/title.css"
       - "css/progressbar.css"
       #- "css/custom.css"
@@ -72,8 +72,8 @@ background-size: cover
 # Who am I  
 <br>
 <br>
-## &thinsp; `r icon_rocket()` PhD in Economics (evolutionary game theory)
-## &thinsp; `r icon_rocket()` Data Center, Lead (Since 2019)
+## `r icon_rocket()` PhD in Economics (evolutionary game theory)
+## `r icon_rocket()` Data Center, Lead (Since 2019)
 
 ???
 
@@ -86,10 +86,10 @@ Now, I'm the lead or head(in Korean English), of Data Center, NCSOFT Korea.
 
 # Today Talk  
 
-### &thinsp; `r icon_rocket()` How game data is collected
-### &thinsp; `r icon_rocket()` Three roles of DC
-### &thinsp; `r icon_rocket()` Some latest works of DC
-### &thinsp; `r icon_rocket()` Q & A (if there is any)
+### `r icon_rocket()` How game data is collected
+### `r icon_rocket()` Three roles of DC
+### `r icon_rocket()` Some latest works of DC
+### `r icon_rocket()` Q & A (if there is any)
 
 ???
 
@@ -105,7 +105,7 @@ Three, I tell you some recent issues or research interests of my organization.
 background-image: url(img/Data-Center_wrong.jpg)
 background-size: cover
 class: center, middle, animated, fadeIn
-# <span style="color:black; background-color:gray">&thinsp;Data Center?&thinsp;</span>
+# <span style="color:black; background-color:gray">Data Center?</span>
 
 ???
 
@@ -127,10 +127,10 @@ class: center, middle, animated, fadeIn
 ---
 # Data Center(DC) of NCSOFT
 
-## &thinsp; The work of DC includes 
-### &emsp; &thinsp; `r icon_check()` mananging data and its softwere infra-structure
-### &emsp; &thinsp; `r icon_check()` doing analytics with data 
-### &emsp; &thinsp; `r icon_check()` communucating insights & helping decision making.
+##  The work of DC includes 
+###  `r icon_check()` mananging data and its softwere infra-structure
+###  `r icon_check()` doing analytics with data 
+###  `r icon_check()` communucating insights & helping decision making.
   
 ---
 class: left, top
@@ -206,20 +206,20 @@ $$
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/question-marks.jpg)
 background-size: cover
-class: fadeIn
+class: left, animated, backInRight
 # Questions for You  
 
 --
-## &emsp;`r icon_comment()` What is (Big) Data?
+##`r icon_comment()` What is (Big) Data?
 
 --
-## &emsp;`r icon_comment()` Think any data you've handled. 
+##`r icon_comment()` Think any data you've handled. 
 
 --
-## &emsp;`r icon_comment()` How big is big?
+##`r icon_comment()` How big is big?
 
 --
-## &emsp;`r icon_comment()` Can you define data of any kind? 
+##`r icon_comment()` Can you define data of any kind? 
 
 ???
 
@@ -231,7 +231,7 @@ background-image: url(img/excel-like.jpg)
 background-size: cover
 class: center, middle, animated, fadeIn
 
-#<span style="color:black; background-color:gray">&thinsp;Look familiar?&thinsp;</span> 
+#<span style="color:black; background-color:gray">Look familiar?</span> 
 
 ???
 
@@ -258,9 +258,9 @@ Unfortunately, if your have such a good organized data, you are almost at the en
 ---
 # Data May Be A Pile of 'Garbage...'
 <br>
-### &thinsp; `r icon_check()` Usually data are not (cannot be) so *clean*. 
-### &thinsp; `r icon_check()` Something organized or tabulated &rarr; You got the picture of data. 
-### &thinsp; `r icon_check()` Big data are generally unorganized, unstructured, and messy.
+###  `r icon_check()` Usually data are not (cannot be) so *clean*. 
+###  `r icon_check()` Something organized or tabulated &rarr; You got the picture of data. 
+###  `r icon_check()` Big data are generally unorganized, unstructured, and messy.
 
 
 
@@ -268,7 +268,7 @@ Unfortunately, if your have such a good organized data, you are almost at the en
 background-image: url(img/gameplaying.gif)
 background-size: cover
 class: left, top, animated, fadeIn
-### <span style="color:black; background-color:gray">&thinsp;When you playing game...&thinsp;</span> 
+### <span style="color:black; background-color:gray">When you playing game...</span> 
 
 ---
 background-image: url(img/NC_MMORPG.png)
@@ -299,7 +299,7 @@ class: left, top, animated, fadeIn
 background-image: url(img/log.png)
 background-size: cover
 class: center, middle, animated, fadeIn
-##<span style="color:black; background-color:gray">&thinsp;logs are ...&thinsp;</span> 
+##<span style="color:black; background-color:gray">logs are ...</span> 
 
 ???
 
@@ -345,7 +345,7 @@ So, we have to be a janitor of data.
 ---
 background-image: url(img/big-data-cleanup-iceberg.png)
 background-size: cover
-class: center, middle, animated, fadeIn
+class: center, middle, animated, fadeInDown
 
  
 
@@ -356,10 +356,10 @@ class: left, top, animated, fadeIn
 
 # DC as A Data Janitor
 <br>
-## &thinsp; `r icon_rocket()` Think what a janitor does.
-### &emsp; &thinsp; `r icon_check()` All of janitor jobs are about preparing something for the work 
-### &emsp; &thinsp; `r icon_check()` Any automated system cannot process log without human effort.
-### &emsp; &thinsp; `r icon_check()` Around 90% of data works is janitor jobs.   
+##  `r icon_rocket()` Think what a janitor does.
+###  `r icon_check()` All of janitor jobs are about preparing something for the work 
+###  `r icon_check()` Any automated system cannot process log without human effort.
+###  `r icon_check()` Around 90% of data works is janitor jobs.   
 
 ???
 The beginning, I dare to say that, the single most important job of data work is cleaning data.
@@ -373,9 +373,9 @@ Because, cleaning job is really dirty and toiling
 ---
 # What Data Engineers do in DC 
 <br>
-### &emsp; `r icon_rocket()` Managing our custom Hadoop system
-### &emsp; `r icon_rocket()` Developing data tools and services 
-### &emsp; `r icon_rocket()` Operating day-to-day data stream  
+### `r icon_rocket()` Managing our custom Hadoop system
+### `r icon_rocket()` Developing data tools and services 
+### `r icon_rocket()` Operating day-to-day data stream  
 
 
 ???
@@ -400,8 +400,8 @@ class: left, top, animated, fadeIn
 # DC as A Data Communicator 
 <br>
 <br>
-### &emsp; `r icon_rocket()` Data is nothing if its messege fails to be delivered.  
-### &emsp; `r icon_rocket()` Communication is key for data works.
+### `r icon_rocket()` Data is nothing if its messege fails to be delivered.  
+### `r icon_rocket()` Communication is key for data works.
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/comm_3.jpg)
@@ -410,8 +410,8 @@ class: left, top, animated, fadeIn
 # Two Pillars of Communication
 <br>
 <br>
-## &thinsp; 1. Metrics 
-## &thinsp; 2. Visualization 
+##  1. Metrics 
+##  2. Visualization 
 
 
 ???
@@ -425,16 +425,16 @@ We have a limited time.
 ---
 # Metrics Frequently Used
 <br>
-### &emsp; `r icon_rocket()` AU = Active Users 
-### &emsp; `r icon_rocket()` ARPU = Average Revenue Per User 
-### &emsp; `r icon_rocket()` ARPPU = Average Revenue Per Paying User 
-### &emsp; `r icon_rocket()` CLV = Customer's Life-time Value 
+### `r icon_rocket()` AU = Active Users 
+### `r icon_rocket()` ARPU = Average Revenue Per User 
+### `r icon_rocket()` ARPPU = Average Revenue Per Paying User 
+### `r icon_rocket()` CLV = Customer's Life-time Value 
 
 ---
 background-image: url(img/marketing_analytics.jpg)
 background-size: cover
 class: center, middle, animated, fadeIn
-##<span style="color:black; background-color:gray">&thinsp;Conventional wisdom...&thinsp;</span> 
+##<span style="color:black; background-color:gray">Conventional wisdom...</span> 
 
 ???
 
@@ -455,8 +455,8 @@ class: left, top, animated, fadeIn
 
 # Speed: Near-real Time 
 <br>
-### &emsp; `r icon_rocket()` The Speed simply matters,
-### &emsp; `r icon_rocket()` Because bugs can be devastating...
+### `r icon_rocket()` The Speed simply matters,
+### `r icon_rocket()` Because bugs can be devastating...
 
 ???
 
@@ -476,7 +476,7 @@ background-size: cover
 background-color: black
 class: center, middle, animated, fadeIn
 
-##<span style="color:black; background-color:gray"> &thinsp; While you are playing...&thinsp;</span> 
+##<span style="color:black; background-color:gray">  While you are playing...</span> 
 
 ---
 background-image: url(img/now_1.png)
@@ -487,7 +487,7 @@ class: center, middle, animated, fadeIn
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/now_1.png)
 background-size: contain
 class: center, middle, animated, fadeIn
-##<span style="color:black; background-color:gray"> &thinsp; We are observing players within 30 seconds time lag &thinsp;</span> 
+##<span style="color:black; background-color:gray">  We are observing players within 30 seconds time lag </span> 
 
 
 ---
@@ -507,8 +507,8 @@ You see that, our dash board of the virtual world, we are servicing.
 # Reinvent: Importing Useful Metrics 
 <br> 
 <br>
-## &thinsp; `r icon_rocket()` Transforming key metrics of real world 
-## &thinsp; `r icon_rocket()` Applying *proven* metrics to virtual world 
+##  `r icon_rocket()` Transforming key metrics of real world 
+##  `r icon_rocket()` Applying *proven* metrics to virtual world 
 
 ---
 background-image: url(img/auction_1.jpg)
@@ -537,23 +537,23 @@ background-size: cover
 
 # Auction House $\approx$ Stock Exchange 
 <br>
-### &thinsp; `r icon_rocket()` An auction house in game shows the valuation of resources.
-### &thinsp; `r icon_rocket()` How to summarise such valuation in auctioning? 
-### &thinsp; `r icon_rocket()` Stock market index may be a good start! 
+###  `r icon_rocket()` An auction house in game shows the valuation of resources.
+###  `r icon_rocket()` How to summarise such valuation in auctioning? 
+###  `r icon_rocket()` Stock market index may be a good start! 
 
 ---
 # Similarity 
 <br>
 <br>
-### &thinsp; `r icon_check()` Valuation by players or traders
-### &thinsp; `r icon_check()` Pricing mechanism (auctioning & matching)
+###  `r icon_check()` Valuation by players or traders
+###  `r icon_check()` Pricing mechanism (auctioning & matching)
 
 ---
 # Difference 
 <br>
 <br>
-### &thinsp; `r icon_check()` Single market vs. Multiple markets (servers)
-### &thinsp; `r icon_check()` Unique unit vs. Variation in a unit 
+###  `r icon_check()` Single market vs. Multiple markets (servers)
+###  `r icon_check()` Unique unit vs. Variation in a unit 
 
 ---
 background-image: url(img/auction_pca.png)
@@ -569,8 +569,8 @@ And we are producing daily or weekly index for auction house in game.
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/auction_pca.png)
 background-size: contain
 class: left, middle, animated, fadeIn
-### &thinsp; `r icon_check()` With PCA, we built composite index for users' auctioning.
-### &thinsp; `r icon_check()` We are tracking daily behaviors and trends.
+###  `r icon_check()` With PCA, we built composite index for users' auctioning.
+###  `r icon_check()` We are tracking daily behaviors and trends.
 
 ---
 background-image: url(img/index_1.png)
@@ -589,8 +589,8 @@ background-size: cover
 # DC as A Data Detective 
 <br>
 <br>
-## &thinsp; `r icon_rocket()` There is no *magic* called MACHINE LEARNING. 
-## &thinsp; `r icon_rocket()` Smart analytics still matters.  
+##  `r icon_rocket()` There is no *magic* called MACHINE LEARNING. 
+##  `r icon_rocket()` Smart analytics still matters.  
 ???
 
 Some say that machine is final and ultimate solution. 
@@ -600,10 +600,10 @@ But, many problem are need to be checked by human intelligence.
 ---
 # When Experimentation Is Not An Option 
 <br>
-### &thinsp; `r icon_rocket()` A/B test is widely used to optimize many services
-### &thinsp; `r icon_rocket()` In social events, A/B test is often controversial. 
-#### &emsp;  &emsp; &thinsp;  `r icon_check()` Consider Covid-19 vaccine A/B test.
-### &thinsp; `r icon_rocket()` Statistical methods are useful. 
+###  `r icon_rocket()` A/B test is widely used to optimize many services
+###  `r icon_rocket()` In social events, A/B test is often controversial. 
+####    `r icon_check()` Consider Covid-19 vaccine A/B test.
+###  `r icon_rocket()` Statistical methods are useful. 
 
 ---
 # Good Gear as Lottery
@@ -616,21 +616,21 @@ But, many problem are need to be checked by human intelligence.
 ---
 # Natural Experiment
 <br>
-## &thinsp;  `r icon_rocket()` With natural experiment,<br> &emsp;&emsp; We have a randomizing machine given by nature. 
-## &thinsp; `r icon_rocket()` What is natural experiment for this problem?
+##   `r icon_rocket()` With natural experiment,<br>&emsp; We have a randomizing machine given by nature. 
+##  `r icon_rocket()` What is natural experiment for this problem?
 
 ---
 # The Effect of Good Gear
 <br>
-## &thinsp;  `r icon_rocket()` If nature gives a player some kind of good gears, the player spends more time and/or money on the game?  
-## &thinsp; `r icon_rocket()` This question is not so simple as it seems...
+##   `r icon_rocket()` If nature gives a player some kind of good gears, the player spends more time and/or money on the game?  
+##  `r icon_rocket()` This question is not so simple as it seems...
 
 ---
 # Confounder 
 
-## &thinsp;  `r icon_rocket()` More education &rarr; More productive &rarr; More Salery 
-## &thinsp;  `r icon_rocket()` More education &rarr; More productive?
-## &thinsp;  `r icon_rocket()` What if there exists a third factor affecting both (education, productivity)
+##   `r icon_rocket()` More education &rarr; More productive &rarr; More Salery 
+##   `r icon_rocket()` More education &rarr; More productive?
+##   `r icon_rocket()` What if there exists a third factor affecting both (education, productivity)?
 
 ---
 background-image: url(img/image1_1.png)
@@ -655,30 +655,6 @@ background-image: url(img/image7_4.png)
 background-size: contain
 
 ---
-# PK vs Retention
-
-## &thinsp; `r icon_rocket()` Can we fix causality?
-### &emsp; &thinsp; `r icon_check()` PK &rarr; Better Retention? <br> &emsp; &thinsp; `r icon_check()` Better Retention &rarr; PK? 
-## &thinsp; `r icon_rocket()` No conclusion without experiment design  
-
-???
-Do you know player killing, PK. It is the act of killing others in game, without any formal consent. If formal consent is reached, it called P v P.
-
----
-background-image: url(img/PK_2.jpg)
-background-size: cover
-
----
-background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)), url(img/PK_2.jpg)
-background-size: cover
-
-# PK for The First Time 
-<br>
-## &thinsp; `r icon_rocket()` 'Being first PKed' (FPK) tends to happen randomly. 
-## &thinsp; `r icon_rocket()` 'FPK' vs 'NOT FPK' comparison 
-## &thinsp; `r icon_rocket()` FPK is randomizing device, a natural experiment. 
-
----
 background-image: url(img/elephant_nudge.jpg)
 background-size: cover
 
@@ -688,9 +664,9 @@ background-size: cover
 
 # Three Nudges for You 
 <br>
-## &thinsp; `r icon_rocket()` Do 'trial and error,' again and again. 
-## &thinsp; `r icon_rocket()` Learn computer languages.
-## &thinsp; `r icon_rocket()` Use git & Share your results. 
+##  `r icon_rocket()` Do 'trial and error,' again and again. 
+##  `r icon_rocket()` Learn computer languages.
+##  `r icon_rocket()` Use git & Share your results. 
 
 ???
 What is nudge? 
@@ -705,7 +681,6 @@ background-size: cover
 
 # Q & A
 
-
 ---
 background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(img/sources.png)
 background-size: cover
@@ -713,7 +688,10 @@ class: left, top, animated, fadeIn
 
 # References 
 
-- [The source of this presentation](https://github.com/anarinsk/lec-unist-nc_dc)
-- [DANBI: Making Index of Auction House](https://danbi-ncsoft.github.io/works/2020/08/13/works-econ_index_1.html)
-- [DANBI: Causality: PK vs Retention](https://danbi-ncsoft.github.io/works/2020/06/17/works-pk_analysis.html)
+- [The source (code) of this presentation](https://github.com/anarinsk/lec-unist-nc_dc)
+  + Notify me if you reuse the code and the content. 
+  
+- [게임 속 시장을 들여다보기 위한 단 하나의 지표](https://danbi-ncsoft.github.io/works/2020/08/13/works-econ_index_1.html)
+
+- [게임 플레이어는 좋은 아이템을 획득하면 게임을 더 열심히 하게 될까?](https://danbi-ncsoft.github.io/works/2021/05/13/class_get_causal_analysis.html)
 

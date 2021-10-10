@@ -1,6 +1,13 @@
+# Initiate renv
 renv::init(force=T)
 
-yif (!requireNamespace("remotes"))
+# To prevent package errors 
+Sys.setenv(R_INSTALL_STAGED = FALSE)
+
+install.packages('devtools')
+
+# Installing packages 
+if (!requireNamespace("remotes"))
   install.packages("remotes")
 
 devtools::install_github(c('rstudio/rmarkdown',
@@ -10,6 +17,9 @@ devtools::install_github(c('rstudio/rmarkdown',
                            'gadenbuie/xaringanthemer', 
                            'gadenbuie/xaringanExtra'), force=TRUE)
 
+install.packages('markdown')
 
+# Do snapshot 
+renv::snapshot()
 
 

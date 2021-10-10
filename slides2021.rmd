@@ -57,13 +57,11 @@ background-size: cover
 
 ???
 Have you seen this? 
-This is the moment for our company. 
+This is the moment for us.
 This photo pops in MLB website on next day of the championship match. 
-The sword is 집행검, as reported, the most powerful weapon in Lineage series. 
-A person talked The model 집행검 is expensive, but they didn't know that virtual 집행검 is much more expensive than the real one. 
-What's your guess of the price? There was a record that 집행검 is traded by more than 50 T USD. 
+The sword is 집행검, as reported, the most powerful weapon in game Lineage. 
 
-Recently, we have problem in Korean gaming scenes. I have my opinion on this issues. But, this is not our interest in this lecture. I will skip or jump issues. 
+Recently, we have problem in Korean gaming scenes. I have my opinion on this issues. But, this is not our interest in this lecture. I will skip issues. 
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/ncsoft2.jpg)
@@ -77,7 +75,7 @@ background-size: cover
 
 ???
 
-I'm PhD in Economics. My major research is about evolutionary game theory. NOT game. 
+I'm PhD (박사) in Economics. My major research is about evolutionary game theory. NOT game. 
 Anyway, game is the key word of my life. 
 
 Now, I'm the lead or head(in Korean English), of Data Center, NCSOFT Korea. 
@@ -95,9 +93,9 @@ Now, I'm the lead or head(in Korean English), of Data Center, NCSOFT Korea.
 
 Today, topics of my talk has three parts. 
 
-One, I give you some description and explnation of game data, what and how they are collected. 
+One, I give you some description and explanation of game data, what they are and how they are collected. 
 
-Two, I give you three main roles of DC. 
+Two, I give you three main roles of Data Center. This is short introdunction to work of data science in companies.  
 
 Three, I tell you some recent issues or research interests of my organization. 
 
@@ -107,22 +105,21 @@ background-size: cover
 class: center, middle, animated, fadeIn
 # <span style="color:black; background-color:gray">Data Center?</span>
 
-???
-
-Now, when people say Data Center 
-
-Usually it is hardware infrastructure, like this. 
-
-hundreds thousands of server. AWS, Microsoft Azure, Google Cloud. 
-
-In NCSOFT, Data Center is the name of organization. We do not handle any hardware-side jobs. Our main mission is to collect and process data from games, to maintain software platform related to data, and to anlayze data. Please, don't be confused.   
-
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/Data-Center_wrong.jpg)
 background-size: cover
 class: center, middle, animated, fadeIn
 
 # It's just a name of division. 
+
+???
+Now, when people say Data Center... 
+
+Usually it is hardware infrastructure, like this. Servers, Networks and something.  
+
+hundreds thousands of server. I think you heard AWS, Microsoft Azure, Google Cloud. 
+
+In NCSOFT, Data Center is the name of organization. We do not take any hardware-side jobs. Our main mission is to collect and process data from games, to maintain related software platform, and to anlayze data. Please, don't be confused.   
 
 ---
 # Data Center(DC) of NCSOFT
@@ -131,7 +128,12 @@ class: center, middle, animated, fadeIn
 ###  `r icon_check()` mananging data and its softwere infra-structure
 ###  `r icon_check()` doing analytics with data 
 ###  `r icon_check()` communucating insights & helping decision making.
-  
+
+???
+I told you already two points. Final one is most important but difficult to do. 
+Usaually, insight is out of reach. Your analytics are ignored or changes its original meaning. 
+But you should try do better, Because this is the holy grail for data scientists. 
+
 ---
 class: left, top
 background-image: url(img/dc-infra.png)
@@ -143,21 +145,20 @@ background-size: contain
 ???
 
 I searched in Google, 
-
-How many students and professors are in your school... 
-
-Google told me the number around 5 thousands.
-
-If we assume that 1 Terabyte hard disk for each one, 
-
+How many students, professors and other workers are in your school... 
+Google showed me that there are around 5 thousands now.
+If we assume that 1 Terabyte hard disk for each one, 5 Tera byte. 
 Data store in NCSOFT is bigger than that. 
-
 
 ---
 class: left, top
 background-image: url(img/bytes.png)
 background-size: cover
 
+???
+This is not main story of today's lecture. 
+In English, 10 to the power of 3, thousand is a unit. 
+In Korea, 10 to the power of 4, 10 thousand (만, 억, 조) is a word unit. 
 
 ---
 class: center, middle
@@ -176,14 +177,9 @@ class: center, left, animated, fadeIn
 ???
 
 This is the reason that you see size of your drive is less than the spec. 
-
 The maker of drive shows you decimal capacity. 
 
-But, Windows or computers shows you 1 KB based on binary 1 Byte. 
-
-That is to say, 
-
-For 1 TB in decimal is around 976GB... 
+But, Windows or computers shows you 1 KB based on binary one Byte. 
 
 ---
 class: center, middle
@@ -202,6 +198,8 @@ $$
 \dfrac{500 * 10^9}{2^{30}} = 465.6613.
 $$
 
+???
+That is to say, For 500 GB in decimal is around 466 GB... 
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/question-marks.jpg)
@@ -222,7 +220,6 @@ class: left, animated, backInRight
 ##`r icon_comment()` Can you define data of any kind? 
 
 ???
-
 Think, for a moment. Imagine your data experiences....
 I may be wrong, but files like Excel or Excel-like data (CSV) looks familiar.  
 
@@ -234,12 +231,8 @@ class: center, middle, animated, fadeIn
 #<span style="color:black; background-color:gray">Look familiar?</span> 
 
 ???
-
 Maybe you are used to this table. 
-
 Excel is your basic data format. 
-
-
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/excel-like.jpg)
@@ -249,11 +242,9 @@ class: center, middle, animated, fadeIn
 # It's organized and tabulated one. 
 
 ???
-
 Your first data analytics may start with excel-like ones. 
 
 Unfortunately, if your have such a good organized data, you are almost at the end of the finish line. 
-
 
 ---
 # Data May Be A Pile of 'Garbage...'
@@ -379,13 +370,12 @@ Because, cleaning job is really dirty and toiling
 
 
 ???
-
+Have you heard on Hadoop? 
 Hadoop is one of standards in bigdata technology. It is open source. But to utilize the power of the Hadoop, a tons of research and effort is needed. 
 
-We also develops inhouse tools and services customized for our game services. 
+We also develops in-house tools and services customized for our game services. 
 
 Data should be managed in ecosystems. So operation is important. Each part get ready to guarantee the whole system work smoothly.  
-
 
 ---
 background-image: url(img/comm_2.gif)
@@ -397,7 +387,7 @@ class: center, middle, animated, fadeIn
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/comm_2.gif)
 background-size: cover
 class: left, top, animated, fadeIn
-# DC as A Data Communicator 
+# DC as a Data Communicator 
 <br>
 <br>
 ### `r icon_rocket()` Data is nothing if its messege fails to be delivered.  
@@ -527,9 +517,9 @@ Players can exchange their items to Dia, in game currency.
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/auction_1.jpg)
 background-size: contain
-class: center, middle, animated, fadeIn
-### `r icon_check()` The one and only MARKET in *Lineage M*
-### `r icon_check()` Does this look like *stock exchange*? 
+class: middle, animated, fadeIn
+### `r icon_rocket()` The one and only MARKET in *Lineage M*
+### `r icon_rocket()` Does this look like *stock exchange*? 
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/SE.jpg)
@@ -602,7 +592,7 @@ But, many problem are need to be checked by human intelligence.
 <br>
 ###  `r icon_rocket()` A/B test is widely used to optimize many services
 ###  `r icon_rocket()` In social events, A/B test is often controversial. 
-####    `r icon_check()` Consider Covid-19 vaccine A/B test.
+#####  &nbsp; `r icon_check()` Consider Covid-19 vaccine A/B test.
 ###  `r icon_rocket()` Statistical methods are useful. 
 
 ---
@@ -616,7 +606,7 @@ But, many problem are need to be checked by human intelligence.
 ---
 # Natural Experiment
 <br>
-##   `r icon_rocket()` With natural experiment,<br>&emsp; We have a randomizing machine given by nature. 
+##   `r icon_rocket()` Natural experiments give us randomizing machine. 
 ##  `r icon_rocket()` What is natural experiment for this problem?
 
 ---

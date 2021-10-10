@@ -4,7 +4,7 @@
     <title>Data in Wonderland</title>
     <meta charset="utf-8" />
     <meta name="author" content="허준석 Junsok Huhh / NCSOFT" />
-    <script src="libs/header-attrs-2.11.1/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.11.3/header-attrs.js"></script>
     <link rel="stylesheet" href="css/animate.css" type="text/css" />
     <link rel="stylesheet" href="css/progressbar.css" type="text/css" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
@@ -17,7 +17,7 @@ class: center, middle, inverse, title-slide
 # Data in Wonderland
 ## Guided tour for data science in online games
 ### 허준석 Junsok Huhh / NCSOFT
-### 2021/10/14 (updated: 2021-10-04)
+### 2021/10/14 (updated: 2021-10-10)
 
 ---
 
@@ -34,13 +34,11 @@ background-size: cover
 
 ???
 Have you seen this? 
-This is the moment for our company. 
+This is the moment for us.
 This photo pops in MLB website on next day of the championship match. 
-The sword is 집행검, as reported, the most powerful weapon in Lineage series. 
-A person talked The model 집행검 is expensive, but they didn't know that virtual 집행검 is much more expensive than the real one. 
-What's your guess of the price? There was a record that 집행검 is traded by more than 50 T USD. 
+The sword is 집행검, as reported, the most powerful weapon in game Lineage. 
 
-Recently, we have problem in Korean gaming scenes. I have my opinion on this issues. But, this is not our interest in this lecture. I will skip or jump issues. 
+Recently, we have problem in Korean gaming scenes. I have my opinion on this issues. But, this is not our interest in this lecture. I will skip issues. 
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/ncsoft2.jpg)
@@ -54,7 +52,7 @@ background-size: cover
 
 ???
 
-I'm PhD in Economics. My major research is about evolutionary game theory. NOT game. 
+I'm PhD (박사) in Economics. My major research is about evolutionary game theory. NOT game. 
 Anyway, game is the key word of my life. 
 
 Now, I'm the lead or head(in Korean English), of Data Center, NCSOFT Korea. 
@@ -72,9 +70,9 @@ Now, I'm the lead or head(in Korean English), of Data Center, NCSOFT Korea.
 
 Today, topics of my talk has three parts. 
 
-One, I give you some description and explnation of game data, what and how they are collected. 
+One, I give you some description and explanation of game data, what they are and how they are collected. 
 
-Two, I give you three main roles of DC. 
+Two, I give you three main roles of Data Center. This is short introdunction to work of data science in companies.  
 
 Three, I tell you some recent issues or research interests of my organization. 
 
@@ -84,22 +82,21 @@ background-size: cover
 class: center, middle, animated, fadeIn
 # &lt;span style="color:black; background-color:gray"&gt;Data Center?&lt;/span&gt;
 
-???
-
-Now, when people say Data Center 
-
-Usually it is hardware infrastructure, like this. 
-
-hundreds thousands of server. AWS, Microsoft Azure, Google Cloud. 
-
-In NCSOFT, Data Center is the name of organization. We do not handle any hardware-side jobs. Our main mission is to collect and process data from games, to maintain software platform related to data, and to anlayze data. Please, don't be confused.   
-
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/Data-Center_wrong.jpg)
 background-size: cover
 class: center, middle, animated, fadeIn
 
 # It's just a name of division. 
+
+???
+Now, when people say Data Center... 
+
+Usually it is hardware infrastructure, like this. Servers, Networks and something.  
+
+hundreds thousands of server. I think you heard AWS, Microsoft Azure, Google Cloud. 
+
+In NCSOFT, Data Center is the name of organization. We do not take any hardware-side jobs. Our main mission is to collect and process data from games, to maintain related software platform, and to anlayze data. Please, don't be confused.   
 
 ---
 # Data Center(DC) of NCSOFT
@@ -108,7 +105,12 @@ class: center, middle, animated, fadeIn
 ###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> mananging data and its softwere infra-structure
 ###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> doing analytics with data 
 ###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> communucating insights &amp; helping decision making.
-  
+
+???
+I told you already two points. Final one is most important but difficult to do. 
+Usaually, insight is out of reach. Your analytics are ignored or changes its original meaning. 
+But you should try do better, Because this is the holy grail for data scientists. 
+
 ---
 class: left, top
 background-image: url(img/dc-infra.png)
@@ -120,21 +122,20 @@ background-size: contain
 ???
 
 I searched in Google, 
-
-How many students and professors are in your school... 
-
-Google told me the number around 5 thousands.
-
-If we assume that 1 Terabyte hard disk for each one, 
-
+How many students, professors and other workers are in your school... 
+Google showed me that there are around 5 thousands now.
+If we assume that 1 Terabyte hard disk for each one, 5 Tera byte. 
 Data store in NCSOFT is bigger than that. 
-
 
 ---
 class: left, top
 background-image: url(img/bytes.png)
 background-size: cover
 
+???
+This is not main story of today's lecture. 
+In English, 10 to the power of 3, thousand is a unit. 
+In Korea, 10 to the power of 4, 10 thousand (만, 억, 조) is a word unit. 
 
 ---
 class: center, middle
@@ -153,14 +154,9 @@ class: center, left, animated, fadeIn
 ???
 
 This is the reason that you see size of your drive is less than the spec. 
-
 The maker of drive shows you decimal capacity. 
 
-But, Windows or computers shows you 1 KB based on binary 1 Byte. 
-
-That is to say, 
-
-For 1 TB in decimal is around 976GB... 
+But, Windows or computers shows you 1 KB based on binary one Byte. 
 
 ---
 class: center, middle
@@ -179,11 +175,13 @@ $$
 \dfrac{500 * 10^9}{2^{30}} = 465.6613.
 $$
 
+???
+That is to say, For 500 GB in decimal is around 466 GB... 
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/question-marks.jpg)
 background-size: cover
-class: fadeIn
+class: left, animated, backInRight
 # Questions for You  
 
 --
@@ -199,7 +197,6 @@ class: fadeIn
 ##<svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"/></svg> Can you define data of any kind? 
 
 ???
-
 Think, for a moment. Imagine your data experiences....
 I may be wrong, but files like Excel or Excel-like data (CSV) looks familiar.  
 
@@ -211,12 +208,8 @@ class: center, middle, animated, fadeIn
 #&lt;span style="color:black; background-color:gray"&gt;Look familiar?&lt;/span&gt; 
 
 ???
-
 Maybe you are used to this table. 
-
 Excel is your basic data format. 
-
-
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/excel-like.jpg)
@@ -226,11 +219,9 @@ class: center, middle, animated, fadeIn
 # It's organized and tabulated one. 
 
 ???
-
 Your first data analytics may start with excel-like ones. 
 
 Unfortunately, if your have such a good organized data, you are almost at the end of the finish line. 
-
 
 ---
 # Data May Be A Pile of 'Garbage...'
@@ -374,7 +365,7 @@ class: center, middle, animated, fadeIn
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/comm_2.gif)
 background-size: cover
 class: left, top, animated, fadeIn
-# DC as A Data Communicator 
+# DC as a Data Communicator 
 &lt;br&gt;
 &lt;br&gt;
 ### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Data is nothing if its messege fails to be delivered.  
@@ -504,9 +495,9 @@ Players can exchange their items to Dia, in game currency.
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/auction_1.jpg)
 background-size: contain
-class: center, middle, animated, fadeIn
-### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> The one and only MARKET in *Lineage M*
-### <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Does this look like *stock exchange*? 
+class: middle, animated, fadeIn
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> The one and only MARKET in *Lineage M*
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Does this look like *stock exchange*? 
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/SE.jpg)
@@ -579,7 +570,7 @@ But, many problem are need to be checked by human intelligence.
 &lt;br&gt;
 ###  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> A/B test is widely used to optimize many services
 ###  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> In social events, A/B test is often controversial. 
-####    <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Consider Covid-19 vaccine A/B test.
+#####  &amp;nbsp; <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Consider Covid-19 vaccine A/B test.
 ###  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Statistical methods are useful. 
 
 ---
@@ -593,7 +584,7 @@ But, many problem are need to be checked by human intelligence.
 ---
 # Natural Experiment
 &lt;br&gt;
-##   <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> With natural experiment,&lt;br&gt;&amp;emsp; We have a randomizing machine given by nature. 
+##   <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Natural experiments give us randomizing machine. 
 ##  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> What is natural experiment for this problem?
 
 ---

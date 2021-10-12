@@ -17,7 +17,7 @@ class: center, middle, inverse, title-slide
 # Data in Wonderland
 ## Guided tour for data science in online games
 ### 허준석 Junsok Huhh / NCSOFT
-### 2021/10/14 (updated: 2021-10-10)
+### 2021/10/14 (updated: 2021-10-11)
 
 ---
 
@@ -124,7 +124,7 @@ background-size: contain
 I searched in Google, 
 How many students, professors and other workers are in your school... 
 Google showed me that there are around 5 thousands now.
-If we assume that 1 Terabyte hard disk for each one, 5 Tera byte. 
+If we assume that 1 trabyte hard disk for each one, 5 petabyte. 
 Data store in NCSOFT is bigger than that. 
 
 ---
@@ -230,7 +230,16 @@ Unfortunately, if your have such a good organized data, you are almost at the en
 ###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Something organized or tabulated &amp;rarr; You got the picture of data. 
 ###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Big data are generally unorganized, unstructured, and messy.
 
+---
+background-image: url(img/BlogimageDataWarehouse-1.png)
+background-size: contain
+class: left, top, animated, fadeIn
 
+???
+It is good to have concepts and their difference of Data Warehouse and Data Lake. 
+
+Game data are in both of two data world, data warehouse, data lake 
+Actually, most of data in today's world are in both world. 
 
 ---
 background-image: url(img/gameplaying.gif)
@@ -305,8 +314,7 @@ class: center, middle, animated, fadeIn
 
 
 ???
-
-The beginning, and I dare to say that, The single most important job of data work is cleaning data. 
+I dare to say that, The single most important job of data work is cleaning them. 
 
 So, we have to be a janitor of data.
 
@@ -330,12 +338,7 @@ class: left, top, animated, fadeIn
 ###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Around 90% of data works is janitor jobs.   
 
 ???
-The beginning, I dare to say that, the single most important job of data work is cleaning data.
-
-So, we have to be a janitor of data.
-
 Let’s on this. I used ‘janitor’ instead of data scientist, data engineer.
-
 Because, cleaning job is really dirty and toiling
 
 ---
@@ -347,13 +350,12 @@ Because, cleaning job is really dirty and toiling
 
 
 ???
-
+Have you heard on Hadoop? 
 Hadoop is one of standards in bigdata technology. It is open source. But to utilize the power of the Hadoop, a tons of research and effort is needed. 
 
-We also develops inhouse tools and services customized for our game services. 
+We also develops in-house tools and services customized for our game services. 
 
 Data should be managed in ecosystems. So operation is important. Each part get ready to guarantee the whole system work smoothly.  
-
 
 ---
 background-image: url(img/comm_2.gif)
@@ -398,6 +400,10 @@ We have a limited time.
 ### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> ARPPU = Average Revenue Per Paying User 
 ### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> CLV = Customer's Life-time Value 
 
+???
+CLV is yard stick or reference point of marketing. 
+For example, if CLV is larger than the cost of attracting one player, market is profitable. Otherwise, market is not. 
+
 ---
 background-image: url(img/marketing_analytics.jpg)
 background-size: cover
@@ -408,7 +414,7 @@ class: center, middle, animated, fadeIn
 
 These metrics are not new. they have been used by marketing or management of telecommunication, shopping, etc. 
 
-The crucial part with game business are their 
+The crucial part with game business should be put into metrics we rely on. 
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/marketing_analytics.jpg)
@@ -428,9 +434,9 @@ class: left, top, animated, fadeIn
 
 ???
 
-In virtual world, game, small loophole can do much much bigger damage on game service. 
+In virtual world, game, small loophole, bug, and other unknown problems can do much much bigger damage on the service. 
 
-So, we must detect them as soon as possible. 
+So, we must detect them as soon as possible. (ASAP)
 
 ---
 background-image: url(img/L2M.gif)
@@ -488,9 +494,9 @@ class: center, middle, animated, fadeIn
 
 Do you know what is this about? 
 
-This is auction house in game Lineage. 
+This is auction house in game Lineage M. 
 
-Players can exchange their items to Dia, in game currency. 
+Players can exchange their items to Dia, one of in-game currencies. 
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/auction_1.jpg)
@@ -587,6 +593,13 @@ But, many problem are need to be checked by human intelligence.
 ##   <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Natural experiments give us randomizing machine. 
 ##  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> What is natural experiment for this problem?
 
+???
+Natural experiments happens radomly. Say that. 
+You cannot make earthquake or something at your hand. If you are not god... 
+That means, 
+The difference made by this kind of happening, serves for randomizing machine. 
+Why do we need randomizing? I'll tell you soon.  
+
 ---
 # The Effect of Good Gear
 &lt;br&gt;
@@ -612,15 +625,28 @@ background-size: contain
 # How to Identify Causality
 
 - Use natural experiment 
-- Use regression method to establish causlity relation 
+- Use regression method to establish causality relation 
+
+???
+When nature give you a good gear for the first time, this makes a kind of ideal field for experiment. 
+
+Using this natural experiment, we can see causal relations in our complex problem. 
 
 ---
 background-image: url(img/image6_2.png)
 background-size: contain
 
+???
+"그릅1" is the player who spent some money in the game. 
+"그룹2" is the player who spent almost no money in the game. 
+This picture shows the effect of 'lucky'-obtaining good gear by chance- on the play day
+
 ---
 background-image: url(img/image7_4.png)
 background-size: contain
+
+???
+This picture shows the effect of 'lucky' on spending in the game. 
 
 ---
 background-image: url(img/elephant_nudge.jpg)
@@ -638,7 +664,6 @@ background-size: cover
 
 ???
 What is nudge? 
-
 It's lightweight suggestion by pushing someone with elbow. 
 
 ---
@@ -648,6 +673,10 @@ background-image: url(img/penguin.gif)
 background-size: cover
 
 # Q &amp; A
+
+???
+This is time for Questions and Answers 
+We have not much time. We may have one or two...
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(img/sources.png)
@@ -663,6 +692,11 @@ class: left, top, animated, fadeIn
 
 - [게임 플레이어는 좋은 아이템을 획득하면 게임을 더 열심히 하게 될까?](https://danbi-ncsoft.github.io/works/2021/05/13/class_get_causal_analysis.html)
 
+???
+Finally, I added three references for you. 
+You can check them freely at any time. 
+
+Thank you for joining me. 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

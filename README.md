@@ -1,5 +1,7 @@
 # Xaringan for UNIST talk on NCSOFT datacenter 
 
+https://anarinsk.github.io/lec-unist-nc_dc/#1
+
 ## When 
 
 - Latest version is made on 2021-10-13 

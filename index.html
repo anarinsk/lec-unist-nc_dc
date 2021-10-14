@@ -3,25 +3,24 @@
   <head>
     <title>Data in Wonderland</title>
     <meta charset="utf-8" />
-    <meta name="author" content="허준석 Jun-sok Huhh / NCSOFT" />
-    <link href="libs/font-awesome-5.3.1/css/fontawesome-all.min.css" rel="stylesheet" />
+    <meta name="author" content="허준석 Junsok Huhh / NCSOFT" />
+    <script src="libs/header-attrs-2.11.3/header-attrs.js"></script>
     <link rel="stylesheet" href="css/animate.css" type="text/css" />
-    <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
-    <link rel="stylesheet" href="css/title.css" type="text/css" />
     <link rel="stylesheet" href="css/progressbar.css" type="text/css" />
-    <link rel="stylesheet" href="css/custom.css" type="text/css" />
-    <link rel="stylesheet" href="css/fonts.css" type="text/css" />
-    <link rel="stylesheet" href="css/title-slide.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="css/xthemer_custom.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
 # Data in Wonderland
-### 허준석 Jun-sok Huhh / NCSOFT
-### 2020/12/08 (updated: 2020-12-06)
+## Guided tour for data science in online games
+### 허준석 Junsok Huhh / NCSOFT
+### 2021/10/14 (updated: 2021-10-13)
 
 ---
+
 
 
 
@@ -34,19 +33,12 @@ background-image: url(img/sword_2.jpg)
 background-size: cover
 
 ???
-
 Have you seen this? 
+This is the moment for us.
+This photo pops in MLB website on next day of the championship match. 
+The sword is 집행검, as reported, the most powerful weapon in game Lineage. 
 
-This is the moment of our company. 
-
-This appears in MLB website on next day of the championship match. 
-
-The sword is 집행검, The most powerful weapon in Lineage series. 
-
-Some news men talked The model 집행검 is expensive, but they didn't know that virtual 집행검 is much more expensive than the real one. 
-
-What's your price of the sword? There was a record that 집행검 is traded by more than 50 T USD. 
-
+Recently, we have problem in Korean gaming scenes. I have my opinion on this issues. But, this is not our interest in this lecture. I will skip issues. 
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/ncsoft2.jpg)
@@ -55,12 +47,12 @@ background-size: cover
 # Who am I  
 &lt;br&gt;
 &lt;br&gt;
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> PhD in Economics (evolutionary game theory)
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Data Center, Lead (Since 2019)
+## <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> PhD in Economics (evolutionary game theory)
+## <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Data Center, Lead (Since 2019)
 
 ???
 
-I'm PhD in Economics. My major reseach is about evolutionary game theory. NOT game. 
+I'm PhD (박사) in Economics. My major research is about evolutionary game theory. NOT game. 
 Anyway, game is the key word of my life. 
 
 Now, I'm the lead or head(in Korean English), of Data Center, NCSOFT Korea. 
@@ -69,26 +61,26 @@ Now, I'm the lead or head(in Korean English), of Data Center, NCSOFT Korea.
 
 # Today Talk  
 
-### &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> How game data is collected
-### &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Three roles of DC
-### &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Some nudges for you
-### &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Q &amp; A (if there is any)
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> How game data is collected
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Three roles of DC
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Some latest works of DC
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Q &amp; A (if there is any)
 
 ???
 
 Today, topics of my talk has three parts. 
 
-One, I give you some description of game data, what and how they are collected. 
+One, I give you some description and explanation of game data, what they are and how they are collected. 
 
-Two, I give you three main roles of DC. 
+Two, I give you three main roles of Data Center. This is short introdunction to work of data science in companies.  
 
-Three, I give you three recommendation if you are interested in working as data scientists or data engineers or whatever data jobs. 
+Three, I tell you some recent issues or research interests of my organization. 
 
 ---
 background-image: url(img/Data-Center_wrong.jpg)
 background-size: cover
 class: center, middle, animated, fadeIn
-# &lt;span style="color:black; background-color:gray"&gt;&amp;thinsp;Data Center?&amp;thinsp;&lt;/span&gt;
+# &lt;span style="color:black; background-color:gray"&gt;Data Center?&lt;/span&gt;
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/Data-Center_wrong.jpg)
@@ -97,14 +89,28 @@ class: center, middle, animated, fadeIn
 
 # It's just a name of division. 
 
+???
+Now, when people say Data Center... 
+
+Usually it is hardware infrastructure, like this. Servers, Networks and something.  
+
+hundreds thousands of server. I think you heard AWS, Microsoft Azure, Google Cloud. 
+
+In NCSOFT, Data Center is the name of organization. We do not take any hardware-side jobs. Our main mission is to collect and process data from games, to maintain related software platform, and to anlayze data. Please, don't be confused.   
+
 ---
 # Data Center(DC) of NCSOFT
 
-## &amp;thinsp; The work of DC includes 
-### &amp;emsp; &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> mananging data and its softwere infrastructure
-### &amp;emsp; &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> doing analytics with data 
-### &amp;emsp; &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> communucating insights &amp; helping decision making.
-  
+##  The work of DC includes 
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> mananging data and its softwere infra-structure
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> doing analytics with data 
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> communucating insights &amp; helping decision making.
+
+???
+Final one is most important but difficult to do. 
+Usaually, insight is out of reach. Your analytics are ignored or loses its original meaning. 
+But you should try do better, Because this is the holy grail for data scientists. 
+
 ---
 class: left, top
 background-image: url(img/dc-infra.png)
@@ -116,80 +122,94 @@ background-size: contain
 ???
 
 I searched in Google, 
-
-How many students and professors are in your school... 
-
-Google told me the number around 5 thousands.
-
-If we assume that 1 Terabyte hard disk for each one, 
-
+How many students, professors and other workers are in your school... 
+Google showed me that there are around 5 thousands now.
+If we assume that 1 trabyte hard disk for each one, 5 petabyte. 
 Data store in NCSOFT is bigger than that. 
-
 
 ---
 class: left, top
-background-image: url(img/peta.jpg)
+background-image: url(img/bytes.png)
 background-size: cover
 
+???
+This is not main story of today's lecture. 
+In English, 10 to the power of 3, thousand is a unit. 
+In Korea, 10 to the power of 4, 10 thousand (만, 억, 조) is a word unit. 
 
 ---
 class: center, middle
-background-image: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)),url(img/peta.jpg)
+background-image: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)),url(img/bytes.png)
 background-size: cover
 class: center, left, animated, fadeIn
 &lt;br&gt;
 &lt;br&gt;
 &lt;br&gt;
 ### 1 Byte = `\(2^8\)` bit 
-### 1 KB = `\(2^{10}\)` Byte `\(\approx\)` 1,000 Byte
-### 1 MB = `\({\rm 1KB}^3 \approx 10^{3+3}\)` Byte
-### 1 GB = `\({\rm 1KB}^6 \approx 10^{3+6}\)` Byte
+### 1 KB = `\(2^{10}\)` Byte = 1,024 Byte `\(\approx\)` `\(10^3\)` Byte
+### 1 MB = `\({\rm 1KB}^2\)` = `\(2^{20}\)` KB = 1,048,576 KB `\(\approx\)` `\(10^{6}\)` Byte
+### 1 GB = `\({\rm 1KB}^3\)` =  `\(2^{30}\)` KB = 1,073,741,824 KB `\(\approx\)` `\(10^{9}\)` Byte
 
 
 ???
 
 This is the reason that you see size of your drive is less than the spec. 
-
 The maker of drive shows you decimal capacity. 
 
-But, Windows shows you 1 KB based on binary 1 Byte. 
+But, Windows or computers shows you 1 KB based on binary one Byte. 
 
-That is to say, 
+---
+class: center, middle
+background-image: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.9)),url(img/bytes.png)
+background-size: cover
+class: left, animated, fadeIn
 
-For 1 TB in decimal is around 976GB... 
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+For example, 
+If a disk size is 500 GB in decimal term, its binary capacity is 
+
+$$
+\dfrac{500 * 10^9}{2^{30}} = 465.6613.
+$$
+
+???
+That is to say, For 500 GB in decimal is around 466 GB... 
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/question-marks.jpg)
 background-size: cover
-class: fadeIn
+class: left, animated, backInRight
 # Questions for You  
 
 --
-## &amp;emsp;<i class="fas  fa-comments " style="color:yellow;"></i> What is (Big) Data?
+##<svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"/></svg> What is (Big) Data?
 
 --
-## &amp;emsp;<i class="fas  fa-comments " style="color:yellow;"></i> Think any data you've handled. 
+##<svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"/></svg> Think any data you've handled. 
 
 --
-## &amp;emsp;<i class="fas  fa-comments " style="color:yellow;"></i> How big is big?
+##<svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"/></svg> How big is big?
 
 --
-## &amp;emsp;<i class="fas  fa-comments " style="color:yellow;"></i> Can you define data of any kind? 
+##<svg aria-hidden="true" role="img" viewBox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"/></svg> Can you define data of any kind? 
+
+???
+Think, for a moment. Imagine your data experiences....
+I may be wrong, but files like Excel or Excel-like data (CSV) looks familiar.  
 
 ---
 background-image: url(img/excel-like.jpg)
 background-size: cover
 class: center, middle, animated, fadeIn
 
-#&lt;span style="color:black; background-color:gray"&gt;&amp;thinsp;Look familiar?&amp;thinsp;&lt;/span&gt; 
+#&lt;span style="color:black; background-color:gray"&gt;Look familiar?&lt;/span&gt; 
 
 ???
-
 Maybe you are used to this table. 
-
 Excel is your basic data format. 
-
-
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/excel-like.jpg)
@@ -199,26 +219,33 @@ class: center, middle, animated, fadeIn
 # It's organized and tabulated one. 
 
 ???
-
 Your first data analytics may start with excel-like ones. 
 
 Unfortunately, if your have such a good organized data, you are almost at the end of the finish line. 
 
-
 ---
 # Data May Be A Pile of 'Garbage...'
 &lt;br&gt;
-### &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> Usually data are not (cannot be) so *clean*. 
-### &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> Something organized or tabulated &amp;rarr; You got the picture of data. 
-### &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> Big data are generally unorganized, unstructured, and messy.
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Usually data are not (cannot be) so *clean*. 
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Something organized or tabulated &amp;rarr; You got the picture of data. 
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Big data are generally unorganized, unstructured, and messy.
 
+---
+background-image: url(img/BlogimageDataWarehouse-1.png)
+background-size: contain
+class: left, top, animated, fadeIn
 
+???
+It is good to have concepts and their difference of Data Warehouse and Data Lake. 
+
+Game data are in both of two data world, data warehouse, data lake 
+Actually, most of data in today's world are in both world. 
 
 ---
 background-image: url(img/gameplaying.gif)
 background-size: cover
 class: left, top, animated, fadeIn
-### &lt;span style="color:black; background-color:gray"&gt;&amp;thinsp;When you playing game...&amp;thinsp;&lt;/span&gt; 
+### &lt;span style="color:black; background-color:gray"&gt;When you playing game...&lt;/span&gt; 
 
 ---
 background-image: url(img/NC_MMORPG.png)
@@ -249,7 +276,7 @@ class: left, top, animated, fadeIn
 background-image: url(img/log.png)
 background-size: cover
 class: center, middle, animated, fadeIn
-##&lt;span style="color:black; background-color:gray"&gt;&amp;thinsp;logs are ...&amp;thinsp;&lt;/span&gt; 
+##&lt;span style="color:black; background-color:gray"&gt;logs are ...&lt;/span&gt; 
 
 ???
 
@@ -285,11 +312,18 @@ background-image: url(img/datacleansing.png)
 background-size: cover
 class: center, middle, animated, fadeIn
 
+
 ???
+I dare to say that, The single most important job of data work is cleaning them. 
 
-The beginning, and I dare to say that, The single most important job of data work is cleaning data. 
+So, we have to be a janitor of data.
 
-So, we have to be a janitor of data. 
+---
+background-image: url(img/big-data-cleanup-iceberg.png)
+background-size: cover
+class: center, middle, animated, fadeInDown
+
+ 
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/datacleansing.png)
@@ -298,27 +332,30 @@ class: left, top, animated, fadeIn
 
 # DC as A Data Janitor
 &lt;br&gt;
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Think what a janitor does.
-### &amp;emsp; &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> All of janitor jobs are about preparing something for the work 
-### &amp;emsp; &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> Any automated system cannot process log without human effort.
-### &amp;emsp; &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> Around 90% of data works is janitor jobs.   
+##  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Think what a janitor does.
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> All of janitor jobs are about preparing something for the work 
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Any automated system cannot process log without human effort.
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Around 90% of data works is janitor jobs.   
+
+???
+Let’s on this. I used ‘janitor’ instead of data scientist, data engineer.
+Because, cleaning job is really dirty and toiling
 
 ---
 # What Data Engineers do in DC 
 &lt;br&gt;
-### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Managing our custom Hadoop system
-### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Developing data tools and services 
-### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Operating day-to-day data stream  
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Managing our custom Hadoop system
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Developing data tools and services 
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Operating day-to-day data stream  
 
 
 ???
-
+Have you heard on Hadoop? 
 Hadoop is one of standards in bigdata technology. It is open source. But to utilize the power of the Hadoop, a tons of research and effort is needed. 
 
-We also develops inhouse tools and services customized for our game services. 
+We also develops in-house tools and services customized for our game services. 
 
-Data should be managed in ecosystems. So operation is important. Each part get ready to gaurantee the whole system work smoothly.  
-
+Data should be managed in ecosystems. So operation is important. Each part get ready to guarantee the whole system work smoothly.  
 
 ---
 background-image: url(img/comm_2.gif)
@@ -330,11 +367,11 @@ class: center, middle, animated, fadeIn
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/comm_2.gif)
 background-size: cover
 class: left, top, animated, fadeIn
-# DC as A Data Communicator 
+# DC as a Data Communicator 
 &lt;br&gt;
 &lt;br&gt;
-### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Data is nothing if its messege fails to be delivered.  
-### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Communication is key for data works.
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Data is nothing if its messege fails to be delivered.  
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Communication is key for data works.
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/comm_3.jpg)
@@ -343,29 +380,42 @@ class: left, top, animated, fadeIn
 # Two Pillars of Communication
 &lt;br&gt;
 &lt;br&gt;
-## &amp;thinsp; 1. Metrics 
-## &amp;thinsp; 2. Visualization 
+##  1. Metrics 
+##  2. Visualization 
 
 
 ???
 
 Two areas are big issue to talk each other deeply. 
+
 Today, I'm going to touch the surface of the first. 
+
 We have a limited time. 
 
 ---
 # Metrics Frequently Used
 &lt;br&gt;
-### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> AU = Active Users 
-### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> ARPU = Average Revenue Per User 
-### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> ARPPU = Average Revenue Per Paying User 
-### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> CLV = Customer's Life-time Value 
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> AU = Active Users 
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> ARPU = Average Revenue Per User 
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> ARPPU = Average Revenue Per Paying User 
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> CLV = Customer's Life-time Value 
+
+???
+CLV is yard stick or reference point of marketing. 
+For example, if CLV is larger than the cost of attracting one player, market is profitable. Otherwise, market is not. 
 
 ---
 background-image: url(img/marketing_analytics.jpg)
 background-size: cover
 class: center, middle, animated, fadeIn
-##&lt;span style="color:black; background-color:gray"&gt;&amp;thinsp;Conventional wisdom...&amp;thinsp;&lt;/span&gt; 
+##&lt;span style="color:black; background-color:gray"&gt;Conventional wisdom...&lt;/span&gt; 
+
+???
+
+These metrics are not new. they have been used by marketing or management of telecommunication, shopping, etc. 
+
+Unique features for game make game analytivcs so special?
+
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/marketing_analytics.jpg)
 background-size: cover
@@ -379,8 +429,14 @@ class: left, top, animated, fadeIn
 
 # Speed: Near-real Time 
 &lt;br&gt;
-### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> The Speed simply matters,
-### &amp;emsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Because bugs can be devastating...
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> The Speed simply matters,
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Because bugs can be devastating...
+
+???
+
+In virtual world, game, small loophole, bug, and other unknown problems can do much much bigger damage on the service. 
+
+So, we must detect them as soon as possible. (ASAP)
 
 ---
 background-image: url(img/L2M.gif)
@@ -394,7 +450,7 @@ background-size: cover
 background-color: black
 class: center, middle, animated, fadeIn
 
-##&lt;span style="color:black; background-color:gray"&gt; &amp;thinsp; While you are playing...&amp;thinsp;&lt;/span&gt; 
+##&lt;span style="color:black; background-color:gray"&gt;  While you are playing...&lt;/span&gt; 
 
 ---
 background-image: url(img/now_1.png)
@@ -405,7 +461,7 @@ class: center, middle, animated, fadeIn
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/now_1.png)
 background-size: contain
 class: center, middle, animated, fadeIn
-##&lt;span style="color:black; background-color:gray"&gt; &amp;thinsp; We are observing players within 30 seconds time lag &amp;thinsp;&lt;/span&gt; 
+##&lt;span style="color:black; background-color:gray"&gt;  We are observing players within 30 seconds time lag &lt;/span&gt; 
 
 
 ---
@@ -413,12 +469,20 @@ background-image: url(img/now_2.png)
 background-size: contain
 class: center, middle, animated, fadeIn
 
+???
+
+Sorry for the masking. 
+
+Because we are very careful about numbers. 
+
+You see that, our dash board of the virtual world, we are servicing. 
+
 ---
 # Reinvent: Importing Useful Metrics 
 &lt;br&gt; 
 &lt;br&gt;
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Transforming key metrics of real world 
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Applying *proven* metrics to virtual world 
+##  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Transforming key metrics of real world 
+##  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Applying *proven* metrics to virtual world 
 
 ---
 background-image: url(img/auction_1.jpg)
@@ -426,12 +490,20 @@ background-color: black
 background-size: contain
 class: center, middle, animated, fadeIn
 
+???
+
+Do you know what is this about? 
+
+This is auction house in game Lineage M. 
+
+Players can exchange their items to Dia, one of in-game currencies. 
+
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/auction_1.jpg)
 background-size: contain
-class: center, middle, animated, fadeIn
-### <i class="fas  fa-check " style="color:steelblue;"></i> The one and only MARKET in *Lineage M*
-### <i class="fas  fa-check " style="color:steelblue;"></i> Does this look like *stock exchange*? 
+class: middle, animated, fadeIn
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> The one and only MARKET in *Lineage M*
+### <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Does this look like *stock exchange*? 
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/SE.jpg)
@@ -439,23 +511,23 @@ background-size: cover
 
 # Auction House `\(\approx\)` Stock Exchange 
 &lt;br&gt;
-### &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> An auction house in game shows the valuation of resources.
-### &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> How to summarise such valuation in auctioning? 
-### &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Stock market index may be a good start! 
+###  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> An auction house in game shows the valuation of resources.
+###  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> How to summarise such valuation in auctioning? 
+###  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Stock market index may be a good start! 
 
 ---
 # Similarity 
 &lt;br&gt;
 &lt;br&gt;
-### &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> Valuation by players or traders
-### &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> Pricing mechanism (auctioning &amp; matching)
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Valuation by players or traders
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Pricing mechanism (auctioning &amp; matching)
 
 ---
 # Difference 
 &lt;br&gt;
 &lt;br&gt;
-### &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> Single market vs. Multiple markets (servers)
-### &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> Unique unit vs. Variation in a unit 
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Single market vs. Multiple markets (servers)
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Unique unit vs. Variation in a unit 
 
 ---
 background-image: url(img/auction_pca.png)
@@ -463,12 +535,16 @@ background-size: contain
 class: center, middle, animated, fadeIn
 
 
+???
+To make index, we should fix reference point, day 0 index. 
+And we are producing daily or weekly index for auction house in game.
+
 ---
 background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/auction_pca.png)
 background-size: contain
 class: left, middle, animated, fadeIn
-### &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> With PCA, we built composite index for users' auctioning.
-### &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> We are tracking daily behaviors and trends.
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> With PCA, we built composite index for users' auctioning.
+###  <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> We are tracking daily behaviors and trends.
 
 ---
 background-image: url(img/index_1.png)
@@ -487,43 +563,90 @@ background-size: cover
 # DC as A Data Detective 
 &lt;br&gt;
 &lt;br&gt;
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> There is no *magic* called MACHINE LEARNING. 
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Smart analytics still matters  
+##  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> There is no *magic* called MACHINE LEARNING. 
+##  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Smart analytics still matters.  
+???
+
+Some say that machine is final and ultimate solution. 
+
+But, many problem are need to be checked by human intelligence.  
 
 ---
 # When Experimentation Is Not An Option 
 &lt;br&gt;
-### &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> A/B test is widely used to optimize many services
-### &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> In social events, A/B test is often controversial. 
-#### &amp;emsp;  &amp;emsp; &amp;thinsp;  <i class="fas  fa-check " style="color:steelblue;"></i> Consider Covid-19 vaccine A/B.
-### &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Statistical methods are useful. 
+###  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> A/B test is widely used to optimize many services
+###  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> In social events, A/B test is often controversial. 
+#####  &amp;nbsp; <svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg> Consider Covid-19 vaccine A/B test.
+###  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Statistical methods are useful. 
 
 ---
-# PK vs Retention
+# Good Gear as Lottery
+&lt;br&gt; 
 
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Can we fix causality?
-### &amp;emsp; &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> PK &amp;rarr; Better Retention? &lt;br&gt; &amp;emsp; &amp;thinsp; <i class="fas  fa-check " style="color:steelblue;"></i> Better Retention &amp;rarr; PK? 
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> No conclusion without experiment design  
+### If nature gives a player good weapon, will the player spend more time and money in the game? 
+### This problem is not so simple as it looks... 
+
 
 ---
 # Natural Experiment
 &lt;br&gt;
-## &amp;thinsp;  <i class="fas  fa-broom " style="color:steelblue;"></i> With natural experiment,&lt;br&gt; &amp;emsp;&amp;emsp; We have a randomizing machine. 
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> What is natural experiment for this problem?
+##   <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Natural experiments give us randomizing machine. 
+##  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> What is natural experiment for this problem?
+
+???
+Natural experiments happens radomly. Say that. 
+You cannot make earthquake or something at your hand. If you are not god... 
+That means, 
+The difference made by this kind of happening, serves for randomizing machine. 
+Why do we need randomizing? I'll tell you soon.  
 
 ---
-background-image: url(img/PK_2.jpg)
-background-size: cover
-
----
-background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)), url(img/PK_2.jpg)
-background-size: cover
-
-# PK for The First Time 
+# The Effect of Good Gear
 &lt;br&gt;
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> 'Being first PKed' (FPK) tends to happen randomly. 
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> 'FPK' vs 'NOT FPK' comparison 
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> FPK is randomizing device, a natural experiment. 
+##   <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> If nature gives a player some kind of good gears, the player spends more time and/or money on the game?  
+##  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> This question is not so simple as it seems...
+
+---
+# Confounder 
+
+##   <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> More education &amp;rarr; More productive &amp;rarr; More Salery 
+##   <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> More education &amp;rarr; More productive?
+##   <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> What if there exists a third factor affecting both (education, productivity)?
+
+---
+background-image: url(img/image1_1.png)
+background-size: contain
+
+---
+background-image: url(img/image1_2.png)
+background-size: contain
+
+---
+# How to Identify Causality
+
+- Use natural experiment 
+- Use regression method to establish causality relation 
+
+???
+When nature give you a good gear for the first time, this makes a kind of ideal field for experiment. 
+
+Using this natural experiment, we can see causal relations in our complex problem. 
+
+---
+background-image: url(img/image6_2.png)
+background-size: contain
+
+???
+"그릅1" is the player who spent some money in the game. 
+"그룹2" is the player who spent almost no money in the game. 
+This picture shows the effect of 'lucky'-obtaining good gear by chance- on the play day
+
+---
+background-image: url(img/image7_4.png)
+background-size: contain
+
+???
+This picture shows the effect of 'lucky' on spending in the game. 
 
 ---
 background-image: url(img/elephant_nudge.jpg)
@@ -535,10 +658,13 @@ background-size: cover
 
 # Three Nudges for You 
 &lt;br&gt;
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Do 'trial and error,' again and again. 
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Learn computer languages.
-## &amp;thinsp; <i class="fas  fa-broom " style="color:steelblue;"></i> Use git &amp; Share your results. 
+##  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Do 'trial and error,' again and again. 
+##  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Learn computer languages.
+##  <svg aria-hidden="true" role="img" viewBox="0 0 192 512" style="height:1em;width:0.38em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M0 384.662V127.338c0-17.818 21.543-26.741 34.142-14.142l128.662 128.662c7.81 7.81 7.81 20.474 0 28.284L34.142 398.804C21.543 411.404 0 402.48 0 384.662z"/></svg> Use git &amp; Share your results. 
 
+???
+What is nudge? 
+It's lightweight suggestion by pushing someone with elbow. 
 
 ---
 layout:false
@@ -548,6 +674,9 @@ background-size: cover
 
 # Q &amp; A
 
+???
+This is time for Questions and Answers 
+We have not much time. We may have one or two...
 
 ---
 background-image: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8)), url(img/sources.png)
@@ -556,14 +685,24 @@ class: left, top, animated, fadeIn
 
 # References 
 
-- [The source of this presentation](https://github.com/anarinsk/lec-unist-nc_dc)
-- [DANBI: Making Index of Auction House](https://danbi-ncsoft.github.io/works/2020/08/13/works-econ_index_1.html)
-- [DANBI: Causality: PK vs Retention](https://danbi-ncsoft.github.io/works/2020/06/17/works-pk_analysis.html)
+- [The source (code) of this presentation](https://github.com/anarinsk/lec-unist-nc_dc)
+  + Notify me if you reuse the code and the content. 
+  
+- [게임 속 시장을 들여다보기 위한 단 하나의 지표](https://danbi-ncsoft.github.io/works/2020/08/13/works-econ_index_1.html)
+
+- [게임 플레이어는 좋은 아이템을 획득하면 게임을 더 열심히 하게 될까?](https://danbi-ncsoft.github.io/works/2021/05/13/class_get_causal_analysis.html)
+
+???
+Finally, I added three references for you. 
+You can check them freely at any time. 
+
+Thank you for joining me. 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
 <script>var slideshow = remark.create({
-"ratio": "16:10",
+"ratio": "16:9",
 "highlightStyle": "github",
 "highlightLines": true,
 "slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>`\n",

@@ -28,6 +28,7 @@ output:
       countIncrementalSlides: false
 ---
 
+
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
   style_mono_accent_inverse(base_color = "#3C989E",
@@ -47,9 +48,9 @@ library(xaringanthemer)
 source('small_bites.R')
 ```
 
-
 layout: true
 class: top, left, spaced, top, animated, fadeIn
+
 
 ---
 background-image: url(img/sword_2.jpg)
@@ -239,7 +240,7 @@ background-image: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)),url(img/exce
 background-size: cover
 class: center, middle, animated, fadeIn
 
-# It's organized and tabulated one. 
+# It's organized and tabulated. 
 
 ???
 Your first data analytics may start with excel-like ones. 
@@ -280,9 +281,9 @@ class: left, top, animated, fadeIn
 
 For online games, your play should be transmitted to the server you joined. 
 
-The results of game playing record continuously via pre-defined format. 
+The results of game playing are being record continuously. 
 
-This record tracks your history, gains, losses, fights and cooperation among players of your play.
+This record tracks your history including gains, losses, fights and cooperation among players.
 
 Side questions. 
 
@@ -290,10 +291,20 @@ How many servers are there in 리니지M?
 
 Tell me your guess. 
 
+Now there are around 150 servers at work. 
+
 ---
 background-image: url(img/hdfs.png)
 background-size: contain
 class: left, top, animated, fadeIn
+
+???
+Your play leaves many many logs. 
+That logs are stacked in our data storage. 
+
+With ETL, data in refined into HDFS format. 
+What is ETL. It's basic work of data job. 
+Extact - Transform and Load 
 
 ---
 background-image: url(img/log.png)
@@ -592,7 +603,7 @@ background-size: cover
 
 Some say that machine is final and ultimate solution. 
 
-But, many problem are need to be checked by human intelligence.  
+But, many problem are need human intelligence. something Automated is not enough.  
 
 ---
 # When Experimentation Is Not An Option 
@@ -600,7 +611,13 @@ But, many problem are need to be checked by human intelligence.
 ###  `r icon_rocket()` A/B test is widely used to optimize many services
 ###  `r icon_rocket()` In social events, A/B test is often controversial. 
 #####  &nbsp; `r icon_check()` Consider Covid-19 vaccine A/B test.
-###  `r icon_rocket()` Statistical methods are useful. 
+###  `r icon_rocket()` Statistical methods on observational data are useful. 
+
+???
+A/B Test is statistical technique for picking an exact reason that make something happen. When We say A and B, A and B is almost same in every respect except one thing. 
+So, If A is diffrent from B, that comes from the one thing different. 
+
+Originally, A/B Test is usual tools for medical test. But in Social sciences, applying A/B test can be difficult. For example, think about Covid-19 vaccine test. For A group, we give real vaccine. For B, we give fake one. There may be ethical issue.  
 
 ---
 # Good Gear as Lottery
@@ -617,11 +634,12 @@ But, many problem are need to be checked by human intelligence.
 ##  `r icon_rocket()` What is natural experiment for this problem?
 
 ???
+What is natral experiment? 
 Natural experiments happens radomly. Say that. 
-You cannot make earthquake or something at your hand. If you are not god... 
+You cannot make earthquake or something as you want... If you are not god... 
 That means, 
-The difference made by this kind of happening, serves for randomizing machine. 
-Why do we need randomizing? I'll tell you soon.  
+The difference made by natural experiments, serves for randomizing machine. 
+Why do we need randomizing? I'll tell you soon why.  
 
 ---
 # The Effect of Good Gear
@@ -629,12 +647,22 @@ Why do we need randomizing? I'll tell you soon.
 ##   `r icon_rocket()` If nature gives a player some kind of good gears, the player spends more time and/or money on the game?  
 ##  `r icon_rocket()` This question is not so simple as it seems...
 
+???
+This question is just like that: 
+
+If you are lottery winner, do you spend more on something? 
+
+This is not easy question, because many other factors or something get in the way. Usually we cannot pick out that factor exactly.  
+
 ---
 # Confounder 
 
 ##   `r icon_rocket()` More education &rarr; More productive &rarr; More Salery 
 ##   `r icon_rocket()` More education &rarr; More productive?
 ##   `r icon_rocket()` What if there exists a third factor affecting both (education, productivity)?
+
+???
+Let's see.
 
 ---
 background-image: url(img/image1_1.png)
